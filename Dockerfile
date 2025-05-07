@@ -13,6 +13,11 @@ WORKDIR /src
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt || true
 
+# OpenCVのためにlibgl1をインストール
+RUN apt update && apt install -y libgl1 libglib2.0-0
+
+
+
 # 全ファイルをコンテナにコピー
 COPY . .
 

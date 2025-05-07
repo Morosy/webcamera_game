@@ -1,14 +1,16 @@
 {
     "name": "Python Dev Container",
     "build": {
-      "dockerfile": "../Dockerfile"
+        "dockerfile": "../Dockerfile"
     },
     "settings": {
-      "terminal.integrated.shell.linux": "/bin/bash"
+        "terminal.integrated.shell.linux": "/bin/bash"
     },
     "extensions": [
-      "ms-python.python"
+        "ms-python.python"
     ],
-    "remoteUser": "root"
-  }
-  
+    "remoteUser": "root",
+    "runArgs": [
+        "--device=/dev/video0:/dev/video0"
+    ]
+}
